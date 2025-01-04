@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Keuangan Harian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat datang di Aplikasi Keuangan Harian!</h1>
+        <label for="saldo">Masukkan saldo awal Anda:</label>
+        <input type="number" id="saldo" placeholder="Saldo Awal" />
+        <button onclick="setSaldo()">Set Saldo</button>
+
+        <div id="menu" style="display:none;">
+            <h2>Menu Utama</h2>
+            <button onclick="tambahPengeluaran()">Tambah Pengeluaran</button>
+            <button onclick="tampilkanTotalPengeluaran()">Tampilkan Total Pengeluaran</button>
+            <button onclick="tampilkanSisaSaldo()">Tampilkan Sisa Saldo</button>
+            <button onclick="keluar()">Keluar</button>
+        </div>
+
+        <div id="formPengeluaran" style="display:none;">
+            <h3>Tambah Pengeluaran</h3>
+            <label for="kategori">Kategori:</label>
+            <input type="text" id="kategori" placeholder="Makanan, Transportasi, dll" />
+            <label for="jumlah">Jumlah:</label>
+            <input type="number" id="jumlah" placeholder="Jumlah Pengeluaran" />
+            <button onclick="simpanPengeluaran()">Simpan Pengeluaran</button>
+        </div>
+
+        <div id="hasil"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
